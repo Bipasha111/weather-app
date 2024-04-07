@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                <div class="a" style="background-color: red; height: 500px; width: 500px; margin: auto;">
+
+<div class="b" style="color: white;"> <h1>ok</h1></div>
+                </div>
+
+<!-- <script>
+    console.log("hii")
+    const bigdiv = document.querySelector(".a")
+    const divb = document.querySelector(".b")
+
+    const apiKey="b43bbff4d4da692d33c7ac5b28571e76";
+       const apiUrl="https://api.openweathermap.org/data/2.5/weather?q=";
+
+    async function checkweather(city='raipur'){
+        //    const res =await fetch(apiUrl+city+`&appid=${apiKey}`)
+        //    var data=await res.json()
+        //    console.log(data)
+
+
+        fetch(apiUrl+city+`&appid=${apiKey}`)
+        .then(function(res){return res.json()}).then(function(data){console.log(data)})
+    }
+    checkweather();
+</script> -->
+
+<script>
+const  key="b43bbff4d4da692d33c7ac5b28571e76"
+const url="https://api.openweathermap.org/data/2.5/weather?q=";
+
+async function bipasha(city='delhi'){
+
+    const res= await fetch(url+city+`&appid=${key}`)
+    var data = await res.json()
+    console.log(data)
+    console.log(data.clouds.all)
+}
+bipasha()
+
+</script>
+</body>
+</html>
